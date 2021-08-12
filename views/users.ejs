@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="/css/users.css">
+</head>
+<body>
+    <%-include("partials/header");-%>
+   <div class="mt-5 mb-5">
+    <table class="table table-striped text-black w-50 m-auto bg-white ">
+        <thead>
+            <tr class="bg-dark text-white">
+                <th scope="col">Id</th>
+                <th scope="col">Name</th>
+                <th scope="col">Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+   <%  usersData.forEach( (user,i) => {  %>
+          <tr>
+            <th scope="row">   <%= user.id %></th>
+            <td> <%= user.name %> </td>
+            <td> RS <%= user.balance %> </td>
+          </tr>
+
+   <%  }) %>
+     </tbody>
+    </table>
+</div>
+    <%-include("partials/footer");-%>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <%-include("partials/header");-%>
+    <div class="mt-5 mb-5">
+        <table class="table table-striped text-black w-50 m-auto bg-white ">
+            <thead>
+                <tr class="bg-dark text-white">
+                    <th scope="col">Sender Id</th>
+                    <th scope="col">Sender Name</th>
+                    <th scope="col">Reciever Id</th>
+                    <th scope="col">Reciever Name</th>
+                    <th scope="col"> Amount </th>
+                    <th scope="col"> Date</th>
+                </tr>
+            </thead>
+            <tbody> 
+
+
+    <%  transactionsDetails.slice().reverse().forEach( (transaction,i) => {  %>
+        <tr>
+            <td>   <%= transaction.senderId %> </td>
+            <td> <%= transaction.senderName %> </td>
+            <td> <%=transaction.recieverId %> </td>
+            <td>   <%= transaction.recieverName %> </td>
+            <td> <%= transaction.amountSent %> </td>
+            <td> <%=transaction.transferDate %> </td>
+        </tr>
+    <% });  %>
+    
+   </tbody>
+   </table>
+
+    <%-include("partials/footer");-%>
+</body>
+</html>

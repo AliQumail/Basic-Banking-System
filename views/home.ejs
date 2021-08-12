@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital@1&display=swap" rel="stylesheet">
+    <title>Sparks Bank</title>
+</head>
+<body>
+ <%-include("partials/header");-%>
+ <div class="container">
+    <div class="row justify-content-center mt-5 mb-5">
+         <div class="col-6 justify-content-center">
+            <img src = "img/intro.svg" alt="My Happy SVG" width="450px"/>
+         </div>
+         <div class="col justify-content-center">
+            <div class="intro-div">
+             <p class="intro"> Welcome to <span class="intro-2">Sparks</span> Bank <br/> Your #1 online bank for transactions 
+             </p>
+            </div>   
+        </div>
+    </div>
+   
+    
+     <br/><br/><br/>
+    <div class="row mt-5 mb-5 justify-content-center align-items-center text-center">
+        <div class="col-6">
+            <div class="card bg-dark text-white w-75 m-auto">
+                <h5 class="card-header text-danger">Users</h5>
+                <div class="card-body">
+                  <p class="card-text">Allows you to see details of Users such as Account ID, Name, Bank Balance </p>
+                  <a href="/users" class="btn btn-primary w-100">VIEW</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <img src = "img/2.svg" alt="My Happy SVG" width="450px"/>
+        </div>
+
+    </div>
+    <div class="row mt-5 mb-5 justify-content-center align-items-center text-center">
+        <div class="col-6">
+            <img src = "img/3.svg" alt="My Happy SVG" width="450px"/>
+        </div>
+        <div class="col">
+            <div class="card bg-dark text-white w-75 m-auto">
+                <h5 class="card-header text-danger">Money Transfer</h5>
+                <div class="card-body">
+                  <p class="card-text">Allows you to send money to any User with the assigned amount.</p>
+                  <a href="/moneytransfer" class="btn btn-primary w-100">VIEW</a>
+                </div>
+              </div>
+        </div>
+
+    </div>
+    <div class="row mt-5 mb-5 justify-content-center align-items-center text-center">
+        <div class="col-6">
+            <div class="card bg-dark text-white w-75 m-auto">
+                <h5 class="card-header text-danger">Transaction</h5>
+                <div class="card-body">
+                  <p class="card-text">View all transactions by all users and the amount sent. </p>
+                  <a href="/transactions" class="btn btn-primary w-100">VIEW</a>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <img src = "img/4.svg" alt="My Happy SVG" width="450px"/>
+        </div>
+
+    </div>
+</div>
+<%-include("partials/footer");-%>
+</body>
+</html>
